@@ -13,6 +13,7 @@
 let strResult = "";
 let word = "javascript";
 const wordArr = word.split(""); // return sebuah array
+// [j,a,v,a,s,c,r,i,p,t]
 
 wordArr.forEach((character) => {
   if (
@@ -45,6 +46,8 @@ function removeVocal(word) {
 
   return strResult;
 }
+
+removeVocal(word);
 
 function removeVocal2(word) {
   word = word.replace(/[aiueo]/gi, "");
@@ -84,17 +87,15 @@ function alphabetValue(word) {
   const wordArr = word.split("");
   let alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
   let totalValue = 0;
-
   wordArr.forEach((character) => {
     const characterValue = alphabet.indexOf(character) + 1;
-
     totalValue += characterValue;
   });
 
   return totalValue;
 }
 
-console.log("this is number 2 " + alphabetValue("bbb"));
+console.log("soal nomor dua hasilnya " + alphabetValue("bb"));
 
 // ===============================================
 
@@ -122,7 +123,6 @@ const alphabetOddValue = (word = "") => {
       totalValue += characterValue;
     }
   });
-
   return totalValue;
 };
 
@@ -202,7 +202,7 @@ function removeDuplicates(arr1 = [], arr2 = []) {
   return [...new Set([...arr1, ...arr2])];
 }
 
-console.log(typeof removeDuplicates([1, 3, 7, 4], [1, 5, 3, 7, 0]));
+console.log(removeDuplicates([1, 3, 7, 4], [1, 5, 3, 7, 0]));
 
 // const a = [1, 3, 7, 4];
 // const b = [1, 5, 3, 7, 0];
